@@ -1,6 +1,6 @@
 <template>
 <div>
-  <h1>A Story about Space Trip</h1>
+  <h1>A Story about a Shopping Trip</h1>
   <form v-if="creating" @submit.prevent="createLib">
     <p>Fill out the following to create a funny story.</p>
     <p>Leave the entry empty to get a random word for that space.</p>
@@ -9,18 +9,15 @@
   </form>
   <div v-else>
     <p>
-      Space Log {{getValue('number1')}}:
-    </p>
-    <p>
-      My name is {{getValue('name1')}}. I don't remember anything else anymore. I am
-      wearing a {{getValue('color1')}} spacesuit and am surrounded by
-      {{getValue('noun1')}} that have {{getValue('number2')}} eyes {{getValue('verb1')}}ing
-      at me. I am scared that my family, if I had one, are {{getValue('verb2')}}ing or
-      {{getValue('verb3')}}ing.
-    </p>
-    <p>
-      The {{getValue('noun2')}}s outside are sparkling like fire. I need to close
-      my eyes...
+      One {{getValue("adjective1")}} day, I decided to go to the {{getValue("noun1")}} store.
+      I needed to get 3 things while all the store: {{getValue("noun2")}},
+      {{getValue("noun3")}}, {{getValue("noun4")}}. While looking for
+      {{getValue("noun2")}}, I discovered that my friend {{getValue("name1")}}
+      was at the store as well. We talked about that time when we
+      {{getValue("pastVerb")}} and decided that we {{getValue("futureVerb")}}
+      in the future. I finished shopping and the {{getValue("adjective2")}} cashier,
+      {{getValue("name2")}}, made me pay. It was a good trip to the
+      {{getValue("noun1")}} store.
     </p>
     <p><a @click="newLib" href="#">Create another Lib</a></p>
   </div>
@@ -38,10 +35,38 @@ export default {
     return {
       creating: true,
       words: [{
-          name: 'number1',
-          display: "A Number",
+          name: 'adjective1',
+          display: "An Adjective",
           value: '',
-          type: 'number',
+          type: 'adjective',
+          filter: '',
+        },
+        {
+          name: 'noun1',
+          display: "A Noun",
+          value: '',
+          type: 'object',
+          filter: '',
+        },
+        {
+          name: 'noun2',
+          display: "A Noun",
+          value: '',
+          type: 'object',
+          filter: '',
+        },
+        {
+          name: 'noun3',
+          display: "A Noun",
+          value: '',
+          type: 'object',
+          filter: '',
+        },
+        {
+          name: 'noun4',
+          display: "A Noun",
+          value: '',
+          type: 'object',
           filter: '',
         },
         {
@@ -52,52 +77,31 @@ export default {
           filter: '',
         },
         {
-          name: 'color1',
-          display: "A Color",
+          name: 'pastVerb',
+          display: "A Verb (Past-tense)",
+          value: '',
+          type: 'verb',
+          filter: 'past',
+        },
+        {
+          name: 'futureVerb',
+          display: "A Verb (Future-tense)",
+          value: '',
+          type: 'verb',
+          filter: 'future',
+        },
+        {
+          name: 'adjective2',
+          display: "An Adjective",
           value: '',
           type: 'adjective',
-          filter: 'color',
-        },
-        {
-          name: 'noun1',
-          display: "A Noun",
-          value: '',
-          type: 'object',
           filter: '',
         },
         {
-          name: 'number2',
-          display: "A Number",
+          name: 'name2',
+          display: "A Name",
           value: '',
-          type: 'number',
-          filter: '',
-        },
-        {
-          name: 'verb1',
-          display: "A Verb (Present-tense)",
-          value: '',
-          type: 'verb',
-          filter: 'present',
-        },
-        {
-          name: 'verb2',
-          display: "A Verb (Present-tense)",
-          value: '',
-          type: 'verb',
-          filter: 'present',
-        },
-        {
-          name: 'verb3',
-          display: "A Verb (Present-tense)",
-          value: '',
-          type: 'verb',
-          filter: 'present',
-        },
-        {
-          name: 'noun2',
-          display: "A Noun",
-          value: '',
-          type: 'object',
+          type: 'name',
           filter: '',
         },
       ]

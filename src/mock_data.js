@@ -62,6 +62,21 @@ let mock = {
       name: "human",
       filter: "large",
     },
+    {
+      id: 7,
+      name: "eye",
+      filter: "bodypart",
+    },
+    {
+      id: 8,
+      name: "leg",
+      filter: "bodypart",
+    },
+    {
+      id: 9,
+      name: "tongue",
+      filter: "bodypart",
+    },
   ],
   adjectives: [
     {
@@ -142,18 +157,21 @@ let mock = {
       filter: "future",
     },
   ],
-  abverbs: [
+  adverbs: [
     {
       id: 1,
       name: "quickly",
+      filter: "",
     },
     {
       id: 2,
       name: "abnormally",
+      filter: "",
     },
     {
       id: 3,
       name: "bravely",
+      filter: "",
     },
   ]
 }

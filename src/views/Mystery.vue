@@ -1,6 +1,6 @@
 <template>
 <div>
-  <h1>A Story about Space Trip</h1>
+  <h1>A Mystery Store</h1>
   <form v-if="creating" @submit.prevent="createLib">
     <p>Fill out the following to create a funny story.</p>
     <p>Leave the entry empty to get a random word for that space.</p>
@@ -9,18 +9,20 @@
   </form>
   <div v-else>
     <p>
-      Space Log {{getValue('number1')}}:
+      I am {{getValue("adjective1")}}.
     </p>
     <p>
-      My name is {{getValue('name1')}}. I don't remember anything else anymore. I am
-      wearing a {{getValue('color1')}} spacesuit and am surrounded by
-      {{getValue('noun1')}} that have {{getValue('number2')}} eyes {{getValue('verb1')}}ing
-      at me. I am scared that my family, if I had one, are {{getValue('verb2')}}ing or
-      {{getValue('verb3')}}ing.
+      I open my {{getValue("bodyPart")}} and {{getValue("verb1")}} something.
+      That something is {{getValue("adjective2")}} and I can't figure out why.
+      Suddenly, I hear a {{getValue("adjective3")}} {{getValue("noun")}} and
+      start {{getValue("adverb1")}} {{getValue("verb2")}}ing. I turn around.
+      I can't believe my {{getValue("bodyPart")}}.
     </p>
     <p>
-      The {{getValue('noun2')}}s outside are sparkling like fire. I need to close
-      my eyes...
+      It is my Birthday!!! All of my friends and family are here, including
+      {{getValue("name1")}} and my favorite person {{getValue("name2")}}.
+      I guess being {{getValue("adjective1")}} doesn't always mean something
+      is going to be {{getValue("adjective4")}}.
     </p>
     <p><a @click="newLib" href="#">Create another Lib</a></p>
   </div>
@@ -30,7 +32,7 @@
 <script>
 import WordList from "../components/WordList.vue"
 export default {
-  name: 'Space',
+  name: 'Mystery',
   components: {
     WordList
   },
@@ -38,39 +40,18 @@ export default {
     return {
       creating: true,
       words: [{
-          name: 'number1',
-          display: "A Number",
-          value: '',
-          type: 'number',
-          filter: '',
-        },
-        {
-          name: 'name1',
-          display: "A Name",
-          value: '',
-          type: 'name',
-          filter: '',
-        },
-        {
-          name: 'color1',
-          display: "A Color",
+          name: 'adjective1',
+          display: "An Adjective",
           value: '',
           type: 'adjective',
-          filter: 'color',
+          filter: '',
         },
         {
-          name: 'noun1',
-          display: "A Noun",
+          name: 'bodyPart',
+          display: "A Body Part",
           value: '',
           type: 'object',
-          filter: '',
-        },
-        {
-          name: 'number2',
-          display: "A Number",
-          value: '',
-          type: 'number',
-          filter: '',
+          filter: 'bodypart',
         },
         {
           name: 'verb1',
@@ -80,6 +61,34 @@ export default {
           filter: 'present',
         },
         {
+          name: 'adjective2',
+          display: "An Adjective",
+          value: '',
+          type: 'adjective',
+          filter: '',
+        },
+        {
+          name: 'adjective3',
+          display: "An Adjective",
+          value: '',
+          type: 'adjective',
+          filter: '',
+        },
+        {
+          name: 'noun',
+          display: "A Noun",
+          value: '',
+          type: 'object',
+          filter: '',
+        },
+        {
+          name: 'adverb1',
+          display: "An Adverb",
+          value: '',
+          type: 'adverb',
+          filter: '',
+        },
+        {
           name: 'verb2',
           display: "A Verb (Present-tense)",
           value: '',
@@ -87,17 +96,24 @@ export default {
           filter: 'present',
         },
         {
-          name: 'verb3',
-          display: "A Verb (Present-tense)",
+          name: 'name1',
+          display: "A Name",
           value: '',
-          type: 'verb',
-          filter: 'present',
+          type: 'name',
+          filter: '',
         },
         {
-          name: 'noun2',
-          display: "A Noun",
+          name: 'name2',
+          display: "A Name",
           value: '',
-          type: 'object',
+          type: 'name',
+          filter: '',
+        },
+        {
+          name: 'adjective4',
+          display: "An Adjective",
+          value: '',
+          type: 'adjective',
           filter: '',
         },
       ]

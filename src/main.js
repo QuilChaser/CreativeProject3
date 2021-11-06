@@ -5,7 +5,6 @@ import router from "./router";
 
 let data = {
   defaultWords: mock,
-  usedWords: [],
 }
 
 let methods = {
