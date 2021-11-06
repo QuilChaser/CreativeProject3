@@ -1,4 +1,4 @@
-# cp3
+# cp3_vue
 
 ## Project setup
 ```
