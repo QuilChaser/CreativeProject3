@@ -1,7 +1,7 @@
 <template>
-<div class="wrapper">
-  <div class="words">
-    <div class="word" v-for="word in words" :key="word.id">
+<div class="wrapper container">
+  <div class="words row">
+    <div class="word col-lg-4" v-for="word in words" :key="word.id">
       <p>{{word.display}}</p>
       <input v-model="word.value"><br />
     </div>
@@ -23,5 +23,9 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.word {
+  padding: .5rem;
 }
 </style>

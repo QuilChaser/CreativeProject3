@@ -1,6 +1,6 @@
 <template>
-<div class="home">
-  <h1>Welcome to Interactive MadLibs.</h1>
+<div class="home container">
+  <h2>Welcome to Interactive MadLibs.</h2>
   <p>
     Interative MadLibs is a service to made a silly story
     by just filling in the blanks. There are three possible

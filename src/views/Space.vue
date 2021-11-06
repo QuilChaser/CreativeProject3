@@ -1,13 +1,13 @@
 <template>
-<div>
-  <h1>A Story about Space Trip</h1>
+<div class="container">
+  <h2>A Story about Space Trip</h2>
   <form v-if="creating" @submit.prevent="createLib">
     <p>Fill out the following to create a funny story.</p>
     <p>Leave the entry empty to get a random word for that space.</p>
     <WordList :words="words" />
     <button type="submit">Submit</button>
   </form>
-  <div v-else>
+  <div v-else class="story">
     <p>
       Space Log {{getValue('number1')}}:
     </p>
@@ -22,7 +22,7 @@
       The {{getValue('noun2')}}s outside are sparkling like fire. I need to close
       my eyes...
     </p>
-    <p><a @click="newLib" href="#">Create another Lib</a></p>
+    <a @click="newLib" href="#" class="newLib">Create another Lib</a>
   </div>
 </div>
 </template>
@@ -105,6 +105,9 @@ export default {
   },
   methods: {
     populate(word) {
+      if (word.value != ''){
+        return
+      }
       if (word.type === 'number') {
         word.value = parseInt(Math.random() * 100);
         return

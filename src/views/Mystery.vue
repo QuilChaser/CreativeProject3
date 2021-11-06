@@ -1,13 +1,13 @@
 <template>
-<div>
-  <h1>A Mystery Store</h1>
+<div class="container">
+  <h2>A Mystery Store</h2>
   <form v-if="creating" @submit.prevent="createLib">
     <p>Fill out the following to create a funny story.</p>
     <p>Leave the entry empty to get a random word for that space.</p>
     <WordList :words="words" />
     <button type="submit">Submit</button>
   </form>
-  <div v-else>
+  <div v-else class="story">
     <p>
       I am {{getValue("adjective1")}}.
     </p>
@@ -24,7 +24,7 @@
       I guess being {{getValue("adjective1")}} doesn't always mean something
       is going to be {{getValue("adjective4")}}.
     </p>
-    <p><a @click="newLib" href="#">Create another Lib</a></p>
+    <a @click="newLib" href="#" class="newLib">Create another Lib</a>
   </div>
 </div>
 </template>

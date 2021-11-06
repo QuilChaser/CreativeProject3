@@ -1,13 +1,13 @@
 <template>
-<div>
-  <h1>A Story about a Shopping Trip</h1>
+<div class="container">
+  <h2>A Story about a Shopping Trip</h2>
   <form v-if="creating" @submit.prevent="createLib">
     <p>Fill out the following to create a funny story.</p>
     <p>Leave the entry empty to get a random word for that space.</p>
     <WordList :words="words" />
     <button type="submit">Submit</button>
   </form>
-  <div v-else>
+  <div v-else class="story">
     <p>
       One {{getValue("adjective1")}} day, I decided to go to the {{getValue("noun1")}} store.
       I needed to get 3 things while all the store: a {{getValue("noun2")}},
@@ -19,7 +19,7 @@
       {{getValue("name2")}}, made me pay. It was a good trip to the
       {{getValue("noun1")}} store.
     </p>
-    <p><a @click="newLib" href="#">Create another Lib</a></p>
+    <a @click="newLib" href="#" class="newLib">Create another Lib</a>
   </div>
 </div>
 </template>
