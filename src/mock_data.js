@@ -98,62 +98,62 @@ let mock = {
   verbs: [
     {
       id: 1,
-      past: "ran",
+      name: "ran",
       tense: "past",
     },
     {
       id: 2,
-      past: "stopped",
+      name: "stopped",
       tense: "past",
     },
     {
       id: 3,
-      past: "jumped",
+      name: "jumped",
       tense: "past",
     },
     {
       id: 4,
-      past: "eating",
+      name: "eating",
       tense: "present",
     },
     {
       id: 5,
-      past: "nibble",
+      name: "nibble",
       tense: "present",
     },
     {
       id: 6,
-      past: "SWAG",
+      name: "SWAG",
       tense: "present",
     },
     {
       id: 7,
-      past: "will jump",
+      name: "will jump",
       tense: "future",
     },
     {
       id: 8,
-      past: "will sleep",
+      name: "will sleep",
       tense: "future",
     },
     {
       id: 9,
-      past: "will caress",
+      name: "will caress",
       tense: "future",
     },
   ],
   abverbs: [
     {
       id: 1,
-      past: "quickly",
+      name: "quickly",
     },
     {
       id: 2,
-      past: "abnormally",
+      name: "abnormally",
     },
     {
       id: 3,
-      past: "bravely",
+      name: "bravely",
     },
   ]
 }
