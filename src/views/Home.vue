@@ -2,7 +2,7 @@
 <div class="home container">
   <h2>Welcome to Interactive MadLibs.</h2>
   <p>
-    Interative MadLibs is a service to made a silly story
+    Interative MadLibs is a service to make a silly story
     by just filling in the blanks. There are three possible
     options available: A Store, A Space Log, and A Mystery Story.
   </p>
