@@ -4,16 +4,38 @@
   <form v-if="creating" @submit.prevent="createLib">
     <p>Fill out the following to create a funny story.</p>
     <p>Leave the entry empty to get a random word for that space.</p>
-    <p>An Adjective</p><input v-model="adjective1">
-    <p>A Noun</p><input v-model="noun1"><br />
-    <p>A Noun</p><input v-model="noun2"><br />
-    <p>A Noun</p><input v-model="noun3"><br />
-    <p>A Noun</p><input v-model="noun4"><br />
-    <p>A Name</p><input v-model="name1"><br />
-    <p>A Past-tense Verb</p><input v-model="pastVerb"><br />
-    <p>A Future-tense Verb</p><input v-model="futureVerb"><br />
-    <p>An Adjective</p><input v-model="adjective2"><br />
-    <p>A Name</p><input v-model="name2"><br />
+    <div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+      <p>An Adjective</p><input v-model="adjective1">
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">
+      <p>A Noun</p><input v-model="noun1"><br />
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">
+      <p>A Noun</p><input v-model="noun2"><br />
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">
+      <p>A Noun</p><input v-model="noun3"><br />
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">
+      <p>A Noun</p><input v-model="noun4"><br />
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">
+      <p>A Name</p><input v-model="name1"><br />
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">
+      <p>A Past-tense Verb</p><input v-model="pastVerb"><br />
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">
+      <p>A Future-tense Verb</p><input v-model="futureVerb"><br />
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">
+      <p>An Adjective</p><input v-model="adjective2"><br />
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3">
+      <p>A Name</p><input v-model="name2"><br />
+    </div>
+    </div>
     <br />
     <button type="submit">Submit</button>
   </form>
@@ -81,7 +103,7 @@ export default {
     verb(tense) {
       let verbs = this.$root.$data.defaultWords.verbs;
       verbs = verbs.filter(n => {
-        return n.tense === tense;
+        return n.filter === tense;
       });
       let index = parseInt(Math.random() * 100 % verbs.length);
       return verbs[index].name;

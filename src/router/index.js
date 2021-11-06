@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Store from "../views/store.vue";
+import Space from "../views/Space.vue";
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: "/store",
     name: "Store",
     component: Store,
+  },
+  {
+    path: "/space",
+    name: "Space",
+    component: Space,
   },
 ];
 
