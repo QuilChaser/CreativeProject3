@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-  <h2>A Mystery Store</h2>
+  <h2>A Mystery Story</h2>
   <form v-if="creating" @submit.prevent="createLib">
     <p>Fill out the following to create a funny story.</p>
     <p>Leave the entry empty to get a random word for that space.</p>

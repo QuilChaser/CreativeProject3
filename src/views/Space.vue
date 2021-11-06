@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-  <h2>A Story about Space Trip</h2>
+  <h2>A Story about A Space Trip</h2>
   <form v-if="creating" @submit.prevent="createLib">
     <p>Fill out the following to create a funny story.</p>
     <p>Leave the entry empty to get a random word for that space.</p>
@@ -14,7 +14,7 @@
     <p>
       My name is {{getValue('name1')}}. I don't remember anything else anymore. I am
       wearing a {{getValue('color1')}} spacesuit and am surrounded by
-      {{getValue('noun1')}} that have {{getValue('number2')}} eyes {{getValue('verb1')}}ing
+      {{getValue('noun1')}}s that have {{getValue('number2')}} eyes {{getValue('verb1')}}ing
       at me. I am scared that my family, if I had one, are {{getValue('verb2')}}ing or
       {{getValue('verb3')}}ing.
     </p>

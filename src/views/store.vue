@@ -10,8 +10,8 @@
   <div v-else class="story">
     <p>
       One {{getValue("adjective1")}} day, I decided to go to the {{getValue("noun1")}} store.
-      I needed to get 3 things while all the store: a {{getValue("noun2")}},
-      a {{getValue("noun3")}}, and a {{getValue("noun4")}}. While looking for
+      I needed to get 3 things while at the store: a {{getValue("noun2")}},
+      a {{getValue("noun3")}}, and a {{getValue("noun4")}}. While looking for a
       {{getValue("noun2")}}, I discovered that my friend {{getValue("name1")}}
       was at the store as well. We talked about that time when we
       {{getValue("pastVerb")}} and decided that we {{getValue("futureVerb")}}
