@@ -1,5 +1,5 @@
 let mock = {
-  names = [
+  names: [
     {
       id: 1,
       name: "Chad",
@@ -31,7 +31,7 @@ let mock = {
       gender: "female",
     }
   ],
-  objects = [
+  objects: [
     {
       id: 1,
       name: "tea cup",
@@ -63,7 +63,7 @@ let mock = {
       size: "large",
     },
   ],
-  adjectives = [
+  adjectives: [
     {
       id: 1,
       name: "red",
@@ -95,7 +95,7 @@ let mock = {
       size: "large",
     },
   ],
-  verbs = [
+  verbs: [
     {
       id: 1,
       past: "ran",
@@ -142,7 +142,7 @@ let mock = {
       tense: "future",
     },
   ],
-  abverbs = [
+  abverbs: [
     {
       id: 1,
       past: "quickly",
